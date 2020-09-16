@@ -1,0 +1,18 @@
+﻿<Window x:Class="CustomSorting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomSorting"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="325.045" Width="548.457"
+        DataContext="{StaticResource ViewModel}">
+    <Grid>
+        <Label Content="Initial Order: " HorizontalAlignment="Left" Margin="20,22,0,0" VerticalAlignment="Top" Height="25" Width="173"/>
+        <Label Content="{Binding StaticList, Mode=OneTime}" HorizontalAlignment="Left" Margin="20,47,0,0" VerticalAlignment="Top" Height="174" Width="173"/>
+        <Button Name="btnSort" Command="{Binding SortCommand}" Content="Sort" Width="75" Height="23" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="193,23,0,214" />
+        <CheckBox Content="Sort Descending" IsChecked="{Binding DescendingIsChecked}" HorizontalAlignment="Left" Margin="176,66,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sorted: " HorizontalAlignment="Left" Margin="342,22,0,0" VerticalAlignment="Top" Height="25" Width="173"/>
+        <Label Content="{Binding SortedList, Mode=TwoWay}" HorizontalAlignment="Left" Margin="342,48,0,0" VerticalAlignment="Top" Height="174" Width="173"/>
+    </Grid>
+</Window>
